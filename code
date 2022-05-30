@@ -1,0 +1,37 @@
+# Fully_Fucntional_Login_System
+
+
+login = {
+
+    "username" : "aditya_panuganti",
+    "password" : "xyz"
+}
+while True:
+    print("1.Register")
+    print("2.Login")
+    print("3.Forgot Password")
+    print("4.View Dictonary")
+    choice = int(input("Enter your choice"))
+    if choice == 1:
+        username = input("Enter your username: ")
+        password = input("Enter your password: ")
+        login.update({"username": username, "password": password})
+        print("registration success")
+    elif choice == 2:
+
+        username = input("enter username")
+        password = input("enter password")
+        if login["username"] == username and login["password"] == password:
+            print("Valid Login")
+        else:
+            print("Invalid login")
+    elif choice ==3:
+        new_password = input("Enter new password")
+        login['password'] = new_password
+        print("Password changed succesfully")
+    elif choice ==4:
+        print(login)
+
+    else:
+        print("Invalid Choice")
+        break
